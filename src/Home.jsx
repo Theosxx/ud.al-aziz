@@ -357,19 +357,13 @@ function CatalogPage() {
 function Footer({ setPage }) {
   return (
     <footer className="bg-stone-900 text-stone-300 mt-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="font-bold text-white text-lg font-mono mb-2">UD.AL-AZIZ Industrial</div>
           <p className="text-xs text-stone-500 leading-relaxed">© 2003 UD.AL-AZIZ Industrial. All rights reserved.</p>
           <p className="text-xs text-stone-500 mt-1">High-precision calendar tinplate clips.</p>
           <div className="flex gap-3 mt-4">
-            <a href="#" className="text-stone-500 hover:text-white transition-colors">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
-            </a>
-            <a href={`mailto:info@udalaziz.com`} className="text-stone-500 hover:text-white transition-colors">
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-            </a>
-            <a href="#" className="text-stone-500 hover:text-white transition-colors">
+            <a href="https://maps.app.goo.gl/18jzsSk3XYAyV6dT7" className="text-stone-500 hover:text-white transition-colors">
               <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
             </a>
           </div>
@@ -379,14 +373,11 @@ function Footer({ setPage }) {
           <ul className="space-y-2 text-sm">
             <li><button onClick={() => setPage("home")} className="hover:text-white transition-colors">Beranda</button></li>
             <li><button onClick={() => setPage("catalog")} className="hover:text-white transition-colors">Katalog</button></li>
-            <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
           </ul>
         </div>
         <div>
           <div className="text-xs tracking-widest font-semibold uppercase text-stone-400 mb-4">BANTUAN</div>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white transition-colors">Shipping Info</a></li>
             <li>
               <a href={WA_LINK} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
                 <IconWA /> WhatsApp Sales
@@ -394,6 +385,29 @@ function Footer({ setPage }) {
             </li>
           </ul>
         </div>
+        <div>
+          <div className="text-xs tracking-widest font-semibold uppercase text-stone-400 mb-4">
+            LOKASI KAMI
+          </div>
+
+          <div className="rounded-lg overflow-hidden border border-stone-700">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!4v1780495511399!6m8!1m7!1sLEXXpGLXnEzGEzXi6snhZg!2m2!1d-7.524044522401875!2d112.4163743236503!3f175.85!4f-18!5f0.4000000000000002"
+              width="100%"
+              height="200"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi UD AL-AZIZ"
+            />
+          </div>
+
+          <p className="text-xs text-stone-500 mt-3 leading-relaxed">
+            Desa Brangkal Gang 8 RT 05 RW 03,
+            Sooko, Mojokerto, Jawa Timur
+          </p>
+</div>
       </div>
     </footer>
   );
